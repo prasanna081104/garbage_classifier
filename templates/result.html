@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠 Waste Classification Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h1>🧠 Prediction Result</h1>
+
+  <div class="result-card">
+    <img src="{{ image_path }}" alt="Uploaded Waste Image">
+    <h2>Predicted Class: <span>{{ predicted_class }}</span></h2>
+    <p>Degradability: <strong>{{ degradability }}</strong></p>
+  </div>
+
+  <a href="{{ url_for('upload_page') }}" class="button">⬅️ Try Another Image</a>
+  <a href="{{ url_for('home') }}" class="button">🏠 Home</a>
+
+</body>
+</html>
